@@ -1,0 +1,8 @@
+node_modules
+coverage
+.next
+.env
+.vscode/*
+!.vscode/settings.json
+newrelic_agent.log 
+package-lock.json
