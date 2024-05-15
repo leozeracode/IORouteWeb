@@ -1,0 +1,24 @@
+.logoContainer {
+  position: absolute;
+  top: 30px; 
+  left: 60px; 
+}
+
+.hero {
+  background-image: url('/hero.jpg');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 25%;
+  right: 70px; 
+  transform: translateY(-50%);
+  text-align: right;
+  color: white;
+  font-size: 32px;
+  line-height: 40px;
+}
