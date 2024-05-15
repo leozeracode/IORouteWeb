@@ -1,10 +1,8 @@
-import { Col, Row, Tabs } from 'antd';
-import React from 'react';
-import FormSearch from '../form';
+import { Col, Row, Tabs } from 'antd'
+import React from 'react'
+import FormSearch from '../form'
 
-
-import styles from './style.module.scss';
-
+import styles from './style.module.scss'
 
 const Search: React.FC = () => {
   return (
@@ -22,4 +20,4 @@ const Search: React.FC = () => {
   )
 }
 
-export default Search;
+export default Search

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Col, Row, Typography } from 'antd';
+import React from 'react'
+import { Col, Row, Typography } from 'antd'
 
-import styles from './style.module.scss';
+import styles from './style.module.scss'
 
 const Card: React.FC = () => {
   return (
@@ -18,4 +18,4 @@ const Card: React.FC = () => {
   )
 }
 
-export default Card;
+export default Card

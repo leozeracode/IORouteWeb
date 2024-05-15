@@ -1,20 +1,16 @@
-import React from 'react';
-import { Button, Col, Form, FormProps, Row } from 'antd';
-import { Input } from 'antd';
+import React from 'react'
+import { Button, Col, Form, type FormProps, Row , Input } from 'antd'
 
 type FieldType = {
-  origin: string;
-  destination: string;
-};
-
+  origin: string
+  destination: string
+}
 
 const FormSearch: React.FC = () => {
-
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
-    console.log('Success:', values);
-  };
-  
-  
+    console.log('Success:', values)
+  }
+
   return (
     <Form
       name="basic"
@@ -59,4 +55,4 @@ const FormSearch: React.FC = () => {
   )
 }
 
-export default FormSearch;
+export default FormSearch

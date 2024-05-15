@@ -12,7 +12,7 @@
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "clear_jest": "jest --clearCache",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx"
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
   },
   "jest": {
     "coverageReporters": [

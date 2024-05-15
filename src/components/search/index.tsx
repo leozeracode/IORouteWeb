@@ -1,12 +1,11 @@
-import React from 'react';
-import { Col, Row } from 'antd';
+import React from 'react'
+import { Col, Row } from 'antd'
 
+import Search from './search'
+import Logo from './logo'
+import Card from './card'
 
-import Search from './search';
-import Logo from './logo';
-import Card from './card';
-
-import styles from './style.module.scss';
+import styles from './style.module.scss'
 
 const Home: React.FC = () => {
   return (
@@ -23,4 +22,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home;
+export default Home

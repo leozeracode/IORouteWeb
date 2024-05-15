@@ -1,6 +1,6 @@
-import React  from 'react'
+import React from 'react'
 
-import { AppProps } from 'next/app'
+import { type AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { ConfigProvider } from 'antd'
@@ -20,7 +20,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps: { session, ...pageProps
     <QueryClientProvider client={queryClient}>
       <ConfigProvider locale={ptBR} theme={{
         token: {
-          colorPrimary: '#FF7100',
+          colorPrimary: '#FF7100'
         },
         components: {
           Input: {
@@ -28,10 +28,10 @@ const App: React.FC<AppProps> = ({ Component, pageProps: { session, ...pageProps
             hoverBorderColor: '#B9B9B9',
             activeBorderColor: '#B9B9B9',
             colorTextPlaceholder: '#4E4E4E',
-            colorBorder: '#B9B9B9',
+            colorBorder: '#B9B9B9'
           }
         }
-      
+
       }}>
         <Component {...pageProps} />
       </ConfigProvider>

@@ -1,16 +1,15 @@
 import * as React from 'react'
-import Document, { DocumentContext, Html, Head, Main, NextScript, DocumentInitialProps } from 'next/document'
+import Document, { type DocumentContext, Html, Head, Main, NextScript, type DocumentInitialProps } from 'next/document'
 
 export default class MyDocument extends Document {
-
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps (ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
     return {
-      ...initialProps,
+      ...initialProps
     }
   }
 
-  render(): JSX.Element {
+  render (): JSX.Element {
     return (
       <Html lang='pt_BR'>
         <Head>
