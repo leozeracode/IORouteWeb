@@ -1,5 +1,7 @@
-import React from 'react'
-import { Button, Col, Form, type FormProps, Row , Input } from 'antd'
+import React, { useEffect } from 'react'
+import { Button, Col, Form, type FormProps, Row, Input } from 'antd'
+import { useGetBestRoute } from '../hooks'
+import { useSearch } from '../contexts'
 
 type FieldType = {
   origin: string
@@ -7,20 +9,32 @@ type FieldType = {
 }
 
 const FormSearch: React.FC = () => {
+  const { isLoading, refetch } = useGetBestRoute()
+  const { setFilter, filter } = useSearch()
+
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
-    console.log('Success:', values)
+    if (!values.origin || !values.destination) {
+      return
+    }
+    setFilter(values)
   }
+
+  useEffect(() => {
+    if (!filter.origin || !filter.destination) {
+      return
+    }
+
+    refetch()
+  }, [filter])
 
   return (
     <Form
       name="basic"
       onFinish={onFinish}
       onFinishFailed={() => { }}
-      autoComplete="off"
     >
       <Col span={24}>
         <Row gutter={[16, 16]} justify={'center'}>
-
           <Col span={12}>
             <Form.Item<FieldType>
               label="Origin"
@@ -46,7 +60,7 @@ const FormSearch: React.FC = () => {
           </Col>
           <Col>
             <Form.Item >
-              <Button type="primary" htmlType="submit" style={{ width: 244, height: 34, borderRadius: 3 }}>Buy now!</Button>
+              <Button loading={isLoading} type="primary" htmlType="submit" style={{ width: 244, height: 34, borderRadius: 3 }}>Buy now!</Button>
             </Form.Item>
           </Col>
         </Row>

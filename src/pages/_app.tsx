@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { ConfigProvider } from 'antd'
 import ptBR from 'antd/lib/locale/pt_BR'
+
 import '../styles/sass/styles.scss'
 
 const queryClient = new QueryClient({

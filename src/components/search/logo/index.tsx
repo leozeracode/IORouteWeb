@@ -11,6 +11,7 @@ const Logo: React.FC = () => {
       src="/logo.svg"
       width={143}
       height={50}
+      fetchPriority='high'
     />
   </div>)
 }
